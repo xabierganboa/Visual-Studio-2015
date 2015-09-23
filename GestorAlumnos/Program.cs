@@ -26,27 +26,29 @@ namespace GestorAlumnos
             switch (opcion)
             {
                 case 1:// Mostrar Alumnos
-                    MostrarAlumnos(); 
+                    MostrarAlumnos();
                     break;
                 case 2: //Añadir Alumnos
-                    //AñadirAlumno();
+                    AddAlumno();
                     break;
             }
         }
-
-        public static void AddAlumno()
+        private static void AddAlumno()
         {
-
             Alumno al = new Alumno();
 
             fa.AddAlumno(al);
         }
-
-
-
+        private static void MostrarAlumnos()
+        {
+            IList<Alumno> alumnos = fa.MostrarAlumnos();
+            Alumno al = null;
+            for (int i = 0; i < alumnos.Count; i++)
+            {
+                al = alumnos.ElementAt(i);
+                Console.WriteLine(al.Nombre + " " + al.Apellidos);
+            }
         }
-
-
         private static int MostrarMenu()
         {
             int opcion = 0;
