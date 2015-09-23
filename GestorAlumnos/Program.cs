@@ -26,7 +26,7 @@ namespace GestorAlumnos
             switch (opcion)
             {
                 case 1:// Mostrar Alumnos
-                    MostrarAlumnos();
+                    MostrarAlumnos(); 
                     break;
                 case 2: //Añadir Alumnos
                     //AñadirAlumno();
